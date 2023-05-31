@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """square module"""
 class Square():
+    """Square class"""
     def __init__(self, size=0):
-        """initialization of instance"""
+        """initialization of attr"""
         self.size = size
 
     @property
     def size(self):
         """get metthod for the size attr"""
-        return self.size
+        return self.__size
 
     @size.setter
     def size(self, value):
