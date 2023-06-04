@@ -1,4 +1,31 @@
-(python3 -c 'print(__import__("my_module").__doc__)')
+>>> from your_module_name import add_integer
 
-(python3 -c 'print(__import__("my_module").my_function.__doc__)')
+>>> add_integer(2, 3)
+5
 
+>>> add_integer(-5, 10)
+5
+
+>>> add_integer(5.5, 10)
+15
+
+>>> add_integer(5, 10.5)
+15
+
+>>> add_integer(3)
+101
+
+>>> add_integer("2", 3)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(2, "3")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+>>> add_integer("2", "3")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer

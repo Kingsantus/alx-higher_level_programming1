@@ -1,0 +1,24 @@
+>>> from your_module import text_indentation
+
+# Test case 1: Basic input
+>>> text_indentation("Hello. This is a test.")
+'Hello.\n\nThis is a test.'
+
+# Test case 2: Empty input
+>>> text_indentation("")
+''
+
+# Test case 3: Input with multiple sentences and special characters
+>>> text_indentation("This is a sentence. Another sentence follows! What about this?")
+'This is a sentence.\n\nAnother sentence follows!\n\nWhat about this?'
+
+# Test case 4: Input with only special characters
+>>> text_indentation("?!:...::")
+'?!:\n\n...\n\n::'
+
+# Test case 5: Invalid input type
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
