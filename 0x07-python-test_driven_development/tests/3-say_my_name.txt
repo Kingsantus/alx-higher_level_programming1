@@ -6,19 +6,26 @@ Test case 1: import function from module
 ::
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-Test case 2: 
->>> say_my_name("John", "Doe")
-My name is John Doe
+Test case 2: checking for both args with string 
+>>> say_my_name("Kingsantus", "Asogwa")
+My name is Kingsantus Asogwa
 
->>> say_my_name("Alice")
-My name is Alice
+Test case 3: checking for one string
+>>> say_my_name("Kingsantus")
+My name is Kingsantus
 
->>> say_my_name(123, "Smith")
+Test case 4: checking for string with number
+>>> say_my_name("23Kingsantus23")
+My name is 23Kingsantus23
+
+Test case 5: checking for int and string
+>>> say_my_name(123, "Asogwa")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
->>> say_my_name("Bob", 456)
+Test case 6: checking string and int
+>>> say_my_name("Kingsantus", 456)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string

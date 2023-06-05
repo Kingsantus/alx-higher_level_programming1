@@ -1,24 +1,51 @@
->>> from your_module import text_indentation
+=======================================
+Tests for ``5-text_indentation`` module
+=======================================
 
-# Test case 1: Basic input
->>> text_indentation("Hello. This is a test.")
-'Hello.\n\nThis is a test.'
+Test case 1: import function from module
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# Test case 2: Empty input
+Test case 2: Basic input
+>>> text_indentation("Hello Kimba. Guess who did this project? I know you know. It me, kingsantus:")
+Hello Kimba.
+<BLANKLINE>
+Guess who did this project?
+<BLANKLINE>
+I know you know.
+<BLANKLINE>
+It me, kingsantus:
+<BLANKLINE>
+
+Test case 3: Empty input
 >>> text_indentation("")
-''
 
-# Test case 3: Input with multiple sentences and special characters
->>> text_indentation("This is a sentence. Another sentence follows! What about this?")
-'This is a sentence.\n\nAnother sentence follows!\n\nWhat about this?'
 
-# Test case 4: Input with only special characters
+Test case 4: Input with multiple sentences and special characters
+>>> text_indentation("This is *  a sentence. Another sentence follows! What about this?")
+This is *  a sentence.
+<BLANKLINE>
+Another sentence follows! What about this?
+<BLANKLINE>
+
+Test case 5: Input with only special characters
 >>> text_indentation("?!:...::")
-'?!:\n\n...\n\n::'
+?
+<BLANKLINE>
+!:
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
 
-# Test case 5: Invalid input type
+Test case 6: Invalid input type
 >>> text_indentation(123)
 Traceback (most recent call last):
-...
+	...
 TypeError: text must be a string
-

@@ -1,23 +1,24 @@
->>> from my_module import lazy_matrix_mul
+========================================
+Tests for ``101-lazy_matrix_mul`` module
+========================================
 
->>> m_a = [[1, 2], [3, 4]]
->>> m_b = [[5, 6], [7, 8]]
->>> lazy_matrix_mul(m_a, m_b)
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]])
 [[19, 22], [43, 50]]
 
->>> m_a = [[1, 2, 3], [4, 5, 6]]
->>> m_b = [[7, 8], [9, 10], [11, 12]]
->>> lazy_matrix_mul(m_a, m_b)
+>>> lazy_matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
 [[58, 64], [139, 154]]
 
->>> m_a = [[1, 2], [3, 4], [5, 6]]
->>> m_b = [[7, 8, 9], [10, 11, 12]]
->>> lazy_matrix_mul(m_a, m_b)
+>>> lazy_matrix_mul([[1, 2], [3, 4], [5, 6]], [[7, 8, 9], [10, 11, 12]])
 [[27, 30, 33], [61, 68, 75], [95, 106, 117]]
 
->>> m_a = [[1, 2], [3, 4]]
->>> m_b = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
->>> lazy_matrix_mul(m_a, m_b)
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+Traceback (most recent call last):
+  ...
+ValueError: m_a and m_b can't be multiplied
+
+>>> lazy_matrix_mul([["f", 5, 6], [4, 5, '8']], [[5, 7, 6], [7, 4, 8]])
 Traceback (most recent call last):
   ...
 ValueError: m_a and m_b can't be multiplied
