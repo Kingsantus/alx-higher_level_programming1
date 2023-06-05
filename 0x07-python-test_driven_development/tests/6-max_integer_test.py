@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-TestMaxInteger module is a unittest module 
-this tests cases in 6-max_integer module
+"""Unittest for max_integer([..])
 """
 import unittest
 max_integer = __import__('6-max_integer').max_integer
