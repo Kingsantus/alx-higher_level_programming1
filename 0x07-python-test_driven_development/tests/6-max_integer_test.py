@@ -1,7 +1,18 @@
+#!/usr/bin/python3
+"""
+TestMaxInteger module is a unittest module 
+this tests cases in 6-max_integer module
+"""
 import unittest
-from max_integer import max_integer
+max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
+    def test_import(self):
+        try:
+            max_integer = __import__('6-max_integer').max_integer
+        except ImportError:
+            self.fail("Failed to import max_integer from 6-max_integer")
+
     def test_empty_list(self):
         """Test when the list is empty"""
         result = max_integer([])
